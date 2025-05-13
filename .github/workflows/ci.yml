@@ -16,10 +16,8 @@ jobs:
       - name: Lint Dockerfiles
         uses: hadolint/hadolint-action@v3.1.0
         with:
-          dockerfile: |
-            api-gateway/Dockerfile
-            backend/Dockerfile
-            frontend/Dockerfile
+          dockerfile: .
+          recursive: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
